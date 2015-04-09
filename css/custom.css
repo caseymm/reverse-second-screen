@@ -1,9 +1,9 @@
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   .mobile-nav { display: block; }
   .web-nav { display: none; }
   }
 
-@media (min-width: 800px) {
+@media (min-width: 600px) {
   .mobile-topbar { display: none; }
   }
 
@@ -58,7 +58,7 @@ padding-bottom:5rem;
 }
 
 .huge {
-  font-size: 5rem;
+  font-size: 4.5rem;
   line-height: 4.5rem;
   text-shadow: 0px 0px 12px rgba(0, 0, 0, .2);
 }
@@ -71,17 +71,9 @@ padding-bottom:5rem;
   line-height: 1.75rem;
 }
 
-video{
-  width:100%;
-  display:block;
-}
-.bgvid {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%; min-height: 100%;
-  width: auto; height: auto;
-  /*z-index: -100;
-  background: url(test.jpg) no-repeat;*/
-  background-size: cover;
+@media (max-width: 600px) {
+    .huge {
+    font-size: 3rem;
+    line-height: 3.5rem;
+    }
 }
