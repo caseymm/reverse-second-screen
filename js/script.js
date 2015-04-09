@@ -5,7 +5,7 @@
     videos.on('value', function (snapshot) {
       var vids = snapshot.val();
       $.each(vids, function(key, value){
-        $('#vids-here').append('<video id="'+key+'" width="100%" height="700px" controls><source src="'+value+'" type="video/mp4"></video>')
+        $('#vids-here').append('<video id="'+key+'" width="100%" style="min-height:'+$('html').height()+'px;" height="'+$('html').height()+'px" loop="true"><source src="'+value+'" type="video/mp4"></video>')
       })
     });
   }
@@ -25,8 +25,16 @@
 
     user_data.on('value', function (snapshot) {
       var data = snapshot.val();
-      console.log(data);
+      triggerPlay(data);
     });
+  }
+
+  function triggerPlay(data){
+    console.log(data);
+    $('video').removeClass('bgvid');
+    $('video').get(0).pause();
+    $('#'+data).addClass('bgvid');
+    $('#'+data).get(0).play();
   }
 
   $(document).ready(function() {
@@ -37,5 +45,6 @@
         feature = hashes[1];
     loadVideo(feature);
     changeClass(user, feature);
+
   });
 })();
