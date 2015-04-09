@@ -13,14 +13,14 @@
 
 blockquote.twitter-tweet {
   background-color: #f0f0f0;
-  padding: 1em .5em 1em 1.5em;
+  padding: 1rem .5rem 1rem 1.5rem;
   border-left: 5px solid #55acee;
-  line-height: 1.2em;
-  font-size: 1em;
+  line-height: 1.5rem;
+  font-size: .8rem;
 }
 
 blockquote.twitter-tweet p {
-  font-size: 1em;
+  font-size: 1.5rem;
 }
 
 .menu {
@@ -29,6 +29,7 @@ blockquote.twitter-tweet p {
   position:absolute;
   top:0px;
   width:100%;
+  border-bottom: 1px solid rgba(0,0,0,.2);
 }
 .fixed {
   position:fixed;
@@ -53,5 +54,28 @@ blockquote.twitter-tweet p {
 }
 
 footer {
-  padding-bottom: 4em;
+padding-bottom:5rem;
+}
+
+.huge {
+  font-size: 5rem;
+  line-height: 4.5rem;
+}
+
+video{
+  width:100%;
+  display:block;
+}
+.bgvid {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; min-height: 100%;
+  width: auto; height: auto;
+  /*z-index: -100;
+  background: url(test.jpg) no-repeat;*/
+  background-size: cover;
+}
+
+.imgcredit {
 }
