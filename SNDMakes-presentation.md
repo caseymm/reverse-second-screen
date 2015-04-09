@@ -56,3 +56,10 @@ How it works:
 	Our prototype illustrates the Reverse Second Screen idea using the browser on two devices, which could be accomplished in a variety of ways and further implemeted on things like Chromecast, Roku or gaming devices as second screens.
 
 	We used Firebase as our backend which connects the two HTML pages displayed, one for each screen. We created markers on the first screen markup to trigger events on the second screen. As the users scrolls (or clicks through if this were a gallery of other layout), the second screen responds accordingly. You can find this project on http://j.mp/Reverse2ndScreen.
+
+
+#### thoughts from Hassan
+
+	Current technology doesn't allow this experience to work very well. We built it with the concept of skating to where the puck is going, which is toward more interconnected devices. Some of these devices will have screens, some will not. The concept currently runs in a browser, but with more development time, the approach could be used in more native sfotware running on mutiple devices including tvs, stereos, computers, cars or future devices.
+	
+	
