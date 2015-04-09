@@ -1,22 +1,25 @@
 
-#Rever Second Screen Presentation
+Reverse Second Screen 
+#SNDMakes Presentation
 Team Georgetown
-#SNDMakes
 April 9, 2015
 Duration: 5 minutes
 
-GOAL: Just enough to get the concept across in an exciting way.
-Indented text is spoken, [] are walkthrough visuals
+* Goal: Just enough to get the concept across in an exciting way.
+* Approach: Start/end slides, middle live video of two-screen experience.
+* Outline below: Indented text is spoken, [] are walkthrough visuals
 
 ### Concept intro (1 minute)
 The challenge: 
 
+	[slide with challenge statement]
 	When we tell stories, how might we create immersive experiences for users without overwhelming them with volume of information and a variety of content types? -- how might we unburden users from the cognitive load of high information density and excessive sensory stimuli, while telling a compelling, immersive story that invokes meaningful emotional responses?
 
 	This is a specially challenging problem on longer pieces that demand user focus and attempt to engage users in a deeper level of thinking. Enter Reverse Second Screen.
 
 The problem being solved/what Reveser Second Screen does: 
 
+	[transition to Reverse Second Screen title slide]
 	Reverse Second Screen takes advantage of a secondary screen to augment the viewing experience on a primary screen by offloading supporting parts of the sensory experience, specifically the content that helps establish mood and context for a story. Let's take a look.
 
 ### example walkthrough 1 (2 minutes)
@@ -45,13 +48,11 @@ How it works:
 	As the user starts reading, their second screen of choice displays photography, high-level maps, animation or subtly looped video orchestrated with sound to more quickly create that sense of place, engaging the user in deeper reading sooner. 
 
 	[wide: show scrolling on primary and content switch on secondary]
-	The second screen never competes for the user's attention: it's not a dual-display story and the second screen is not meant for complimentary data points and artifacts. Rather, it is there for emotional support.
-	
-4. wrap up (1 minute) <<< might be too much detail, could end before this.
+	The second screen never competes for the user's attention: it's not a dual-display story and the second screen is not meant for complimentary data points and artifacts. Rather, it is there for emotional support. The core story stands on its own if the second screen content is not present (graceful degradation).
 
-	[show blank slide with project name]
-	Our prototype illustrates the Reverse Second Screen idea using the browser on two devices, which could be accomplished in a variety of devices and further implemeted on things like Chromecast, Roku or gaming devices.
+#### technical note and wrap up (1+ minute)
 
-	We used Firebase to <summary> and created event markers on the first screen markup to trigger events on the second screen. 
+	[show blank slide with project summary statement]
+	Our prototype illustrates the Reverse Second Screen idea using the browser on two devices, which could be accomplished in a variety of ways and further implemeted on things like Chromecast, Roku or gaming devices as second screens.
 
-
+	We used Firebase as our backend which connects the two HTML pages together, one for each screen. We created markers on the first screen markup to trigger events on the second screen. You can find this project on http://bit.ly/Reverse2ndSceen.
