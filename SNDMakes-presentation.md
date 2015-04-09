@@ -6,14 +6,14 @@ April 9, 2015
 Duration: 5 minutes
 
 * Goal: Just enough to get the concept across in an exciting way.
-* Approach: Start/end slides, middle live video of two-screen experience.
-* Outline below: Indented text is spoken, [] are walkthrough visuals
+* Approach: Start/end slides, middle switch to live video of two-screen experience.
+* Outline below: Indented text is spoken, [] are walkthrough visuals (focus)
 
 ### Concept intro (1 minute)
 The challenge: 
 
 	[slide with challenge statement]
-	When we tell stories, how might we create immersive experiences for users without overwhelming them with volume of information and a variety of content types? -- how might we unburden users from the cognitive load of excessive sensory stimuli and information density, while telling a compelling, immersive story that invokes meaningful emotional responses?
+	When we tell stories, how might we create immersive experiences for users without overwhelming them with either volume of information and gratuitous variety of content types? -- how might we unburden users from the cognitive load of excessive sensory stimuli and information density, while telling a compelling, immersive story that invokes meaningful emotional responses?
 
 	This is a specially challenging problem on longer pieces that demand focus and attempt to engage users in a deeper level of thinking. Enter Reverse Second Screen.
 
