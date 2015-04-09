@@ -1,4 +1,6 @@
 (function() {
+  // var current_id;
+  // var current_user;
 
   function loadVideo(feature){
     var videos = new Firebase('https://sweltering-torch-4591.firebaseIO.com/features/'+feature);
@@ -11,7 +13,8 @@
   }
 
   function changeClass(user, feature){
-    var user_data = new Firebase('https://sweltering-torch-4591.firebaseIO.com/users/'+user+'/'+feature);
+    // current_user = user;
+    var user_data = new Firebase('https://sweltering-torch-4591.firebaseIO.com/users/'+user+'/'+feature+'/slug');
     var itemField = $('#itemInput');
     var itemList = $('#example-items');
 
@@ -24,18 +27,46 @@
     });
 
     user_data.on('value', function (snapshot) {
-      var data = snapshot.val();
-      triggerPlay(data);
+      current_id = snapshot.val();
+      triggerPlay(current_id);
     });
   }
 
-  function triggerPlay(data){
-    console.log(data);
+  function changeVolume(user, feature){
+    var user_data = new Firebase('https://sweltering-torch-4591.firebaseIO.com/users/'+user+'/'+feature+'/slug');
+    var user_volume = new Firebase('https://sweltering-torch-4591.firebaseIO.com/users/'+user+'/'+feature+'/volume');
+
+    $('#volumeButton').on('click', function(){
+      var new_vol = $('#volumeInput').val();
+      user_volume.set(new_vol);
+    })
+
+    user_data.on('value', function (snapshot) {
+      current_id = snapshot.val();
+
+      user_volume.on('value', function (snapshot) {
+        current_vol = snapshot.val();
+        triggerVolume(current_id, current_vol);
+      });
+
+    });
+
+
+  }
+
+  function triggerPlay(current_id){
     $('video').removeClass('bgvid');
     $('video').get(0).pause();
-    $('#'+data).addClass('bgvid');
-    $('#'+data).get(0).play();
+    $('#'+current_id).addClass('bgvid');
+    $('#'+current_id).get(0).play();
   }
+
+  function triggerVolume(current_id, current_vol){
+    console.log(current_id, current_vol);
+    $('#'+current_id).get(0).pause();
+    // .volume = current_vol;
+  }
+
 
   $(document).ready(function() {
     var url = window.location.href;
@@ -45,6 +76,7 @@
         feature = hashes[1];
     loadVideo(feature);
     changeClass(user, feature);
+    changeVolume(user, feature);
 
   });
 })();
