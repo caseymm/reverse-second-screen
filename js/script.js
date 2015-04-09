@@ -61,10 +61,10 @@ $(window).scroll(function (event) {
       console.log("changing!");
       if (newPosition % 2 == 0){
         console.log("cherry1");
-        changeClass("luke", "cherry_blossom", "cherry1");   
+        changeClass("luke", "cherry_blossoms", "cherry1");   
       } else {
         console.log("cherry2");
-        changeClass("luke", "cherry_blossom", "cherry2");              
+        changeClass("luke", "cherry_blossoms", "cherry2");              
       }
       currentPosition = newPosition;
     };
