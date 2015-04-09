@@ -30,6 +30,7 @@
       current_id = snapshot.val();
       triggerPlay(current_id);
     });
+    changeVolume(user, feature);
   }
 
   function changeVolume(user, feature){
@@ -62,9 +63,7 @@
   }
 
   function triggerVolume(current_id, current_vol){
-    console.log(current_id, current_vol);
-    $('#'+current_id).get(0).pause();
-    // .volume = current_vol;
+    $('#'+current_id).get(0).volume = current_vol;
   }
 
 
@@ -76,7 +75,6 @@
         feature = hashes[1];
     loadVideo(feature);
     changeClass(user, feature);
-    changeVolume(user, feature);
 
   });
 })();
