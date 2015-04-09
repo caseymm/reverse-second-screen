@@ -13,7 +13,7 @@ Duration: 5 minutes
 The challenge: 
 
 	[slide with challenge statement]
-	When we tell stories, how might we create immersive experiences for users without overwhelming them with volume of information and a variety of content types? -- how might we unburden users from the cognitive load of high information density and excessive sensory stimuli, while telling a compelling, immersive story that invokes meaningful emotional responses?
+	When we tell stories, how might we create immersive experiences for users without overwhelming them with volume of information and a variety of content types? -- how might we unburden users from the cognitive load of excessive sensory stimuli and information density, while telling a compelling, immersive story that invokes meaningful emotional responses?
 
 	This is a specially challenging problem on longer pieces that demand user focus and attempt to engage users in a deeper level of thinking. Enter Reverse Second Screen.
 
