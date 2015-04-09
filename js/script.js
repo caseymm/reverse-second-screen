@@ -2,34 +2,21 @@
   // var current_id;
   // var current_user;
 
-  function loadVideo(feature){
-    var videos = new Firebase('https://sweltering-torch-4591.firebaseIO.com/features/'+feature);
-    videos.on('value', function (snapshot) {
-      var vids = snapshot.val();
-      $.each(vids, function(key, value){
-        $('#vids-here').append('<video id="'+key+'" width="100%" style="min-height:'+$('html').height()+'px;" height="'+$('html').height()+'px" loop="true"><source src="'+value+'" type="video/mp4"></video>')
-      })
-    });
-  }
-
-  function changeClass(user, feature){
+  function changeClass(user, feature, item){
     // current_user = user;
     var user_data = new Firebase('https://sweltering-torch-4591.firebaseIO.com/users/'+user+'/'+feature+'/slug');
     var itemField = $('#itemInput');
     var itemList = $('#example-items');
-
-    itemField.keypress(function (e) {
-      if (e.keyCode == 13) {
-        var item = itemField.val();
         user_data.set(item);
-        itemField.val('');
-      }
-    });
 
-    user_data.on('value', function (snapshot) {
-      current_id = snapshot.val();
-      triggerPlay(current_id);
-    });
+    // itemField.keypress(function (e) {
+    //   if (e.keyCode == 13) {
+    //     var item = itemField.val();
+    //     user_data.set(item);
+    //     itemField.val('');
+    //   }
+    // });
+
     changeVolume(user, feature);
   }
 
@@ -42,29 +29,8 @@
       user_volume.set(new_vol);
     })
 
-    user_data.on('value', function (snapshot) {
-      current_id = snapshot.val();
+    };
 
-      user_volume.on('value', function (snapshot) {
-        current_vol = snapshot.val();
-        triggerVolume(current_id, current_vol);
-      });
-
-    });
-
-
-  }
-
-  function triggerPlay(current_id){
-    $('video').removeClass('bgvid');
-    $('video').get(0).pause();
-    $('#'+current_id).addClass('bgvid');
-    $('#'+current_id).get(0).play();
-  }
-
-  function triggerVolume(current_id, current_vol){
-    $('#'+current_id).get(0).volume = current_vol;
-  }
 
 
   $(document).ready(function() {
@@ -73,8 +39,40 @@
     hashes.splice(0,1);
     var user = hashes[0],
         feature = hashes[1];
-    loadVideo(feature);
-    changeClass(user, feature);
+
+var newPosition = 0;
+var currentPosition = 1;
+
+$(window).scroll(function (event) {
+    var scroll = $(window).scrollTop();
+    if (scroll.between(1,500)){
+      newPosition = 1;
+    } else if (scroll.between(500,800)){
+      newPosition = 2;
+    } else if (scroll.between(800,1200)){
+      newPosition = 3;
+    } else {
+      newPosition = 4;
+    }
+
+    console.log("new: " + newPosition + " old: " + currentPosition);
+
+    if (newPosition !== currentPosition){
+      console.log("changing!");
+      if (newPosition % 2 == 0){
+        console.log("cherry1");
+        changeClass("luke", "cherry_blossom", "cherry1");   
+      } else {
+        console.log("cherry2");
+        changeClass("luke", "cherry_blossom", "cherry2");              
+      }
+      currentPosition = newPosition;
+    };
+});
+
+Number.prototype.between = function (min, max) {
+    return this > min && this < max;
+};
 
   });
 })();
