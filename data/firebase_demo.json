@@ -1,0 +1,19 @@
+{
+  "users":{
+    "caseymmiller": {
+      "cherry_blossoms": "cherry1",
+      "death_valley": "death3"
+    },
+    "luke": {
+      "cherry_blossoms": "cherry4",
+      "death_valley": "death2"
+    }
+  },
+  "features":{
+    "cherry_blossoms": {
+      "cherry1": "http://www.808.dk/vstreamer.asp?video=gizmo.mp4",
+      "cherry2": "http://hdw.datawallpaper.com/nature/cherry-blossom-tree-wide-wallpaper-336434.jpg"
+      },
+    "death_valley": ["death1", "death2", "death3"]
+  }
+}
