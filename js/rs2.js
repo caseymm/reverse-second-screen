@@ -5,7 +5,7 @@
     videos.on('value', function (snapshot) {
       var vids = snapshot.val();
       $.each(vids, function(key, value){
-        $('#vids-here').append('<video id="'+key+'" width="100%" style="min-height:'+$('html').height()+'px;" height="'+$('html').height()+'px" loop="true"><source src="'+value+'" type="video/mp4"></video>')
+        $('#vids-here').append('<video id="'+key+'" width="100%" style="min-height:'+$('html').height()+'px;" height="'+$('html').height()+'px" loop="true"><source src="'+value+'.mp4" type="video/mp4"><source src="'+value+'.ogv" type="video/ogg"></video>')
       })
     });
   }
@@ -37,6 +37,7 @@
   }
 
   function triggerPlay(current_id){
+    // audio pause isn't working
     $('video').removeClass('bgvid');
     $('video').get(0).pause();
     $('#'+current_id).addClass('bgvid');
