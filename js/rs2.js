@@ -24,13 +24,9 @@
     var user_data = new Firebase('https://sweltering-torch-4591.firebaseIO.com/users/'+user+'/'+feature+'/slug');
     var user_volume = new Firebase('https://sweltering-torch-4591.firebaseIO.com/users/'+user+'/'+feature+'/volume');
 
-    user_data.on('value', function (snapshot) {
-      current_id = snapshot.val();
-      user_volume.on('value', function (snapshot) {
-        current_vol = snapshot.val();
-        triggerVolume(current_id, current_vol);
-      });
-
+    user_volume.on('value', function (snapshot) {
+      current_vol = snapshot.val();
+      triggerVolume(current_id, current_vol);
     });
 
 
@@ -55,6 +51,7 @@
         feature = hashes[1];
     loadVideo(feature);
     changeClass(user, feature);
+    changeVolume(user, feature);
 
 
   });

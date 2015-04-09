@@ -24,10 +24,27 @@
     var user_data = new Firebase('https://sweltering-torch-4591.firebaseIO.com/users/'+user+'/'+feature+'/slug');
     var user_volume = new Firebase('https://sweltering-torch-4591.firebaseIO.com/users/'+user+'/'+feature+'/volume');
 
-    $('#volumeButton').on('click', function(){
-      var new_vol = $('#volumeInput').val();
-      user_volume.set(new_vol);
-    })
+    // $('#volumeButton').on('click', function(){
+    //   var new_vol = $('#volumeInput').val();
+    //   user_volume.set(new_vol);
+    // })
+    user_volume.on('value', function (snapshot){
+      var current_vol = snapshot.val();
+      $(function() {
+        $( "#slider" ).slider({
+          range: "min",
+          min: 0,
+          max: 10,
+          value: current_vol,
+          slide: function( event, ui ) {
+            // user_volume.set(ui.value/10);
+            var new_vol = ui.value/10;
+            user_volume.set(new_vol);
+
+          }
+        });
+      });
+    });
 
     };
 
@@ -61,10 +78,10 @@ $(window).scroll(function (event) {
       console.log("changing!");
       if (newPosition % 2 == 0){
         console.log("cherry1");
-        changeClass("luke", "cherry_blossoms", "cherry1");   
+        changeClass(user, feature, "cherry1");  
       } else {
         console.log("cherry2");
-        changeClass("luke", "cherry_blossoms", "cherry2");              
+        changeClass(user, feature, "cherry2");
       }
       currentPosition = newPosition;
     };
