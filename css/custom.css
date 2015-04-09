@@ -60,6 +60,15 @@ padding-bottom:5rem;
 .huge {
   font-size: 5rem;
   line-height: 4.5rem;
+  text-shadow: 0px 0px 12px rgba(0, 0, 0, .2);
+}
+
+.dek {
+  margin-top: 1rem;
+  width: 70%;
+  text-shadow: 0px 0px 12px rgba(0, 0, 0, .2);
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 video{
@@ -75,7 +84,4 @@ video{
   /*z-index: -100;
   background: url(test.jpg) no-repeat;*/
   background-size: cover;
-}
-
-.imgcredit {
 }
