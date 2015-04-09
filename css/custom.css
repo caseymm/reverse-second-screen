@@ -1,0 +1,57 @@
+@media (max-width: 800px) {
+  .mobile-nav { display: block; }
+  .web-nav { display: none; }
+  }
+
+@media (min-width: 800px) {
+  .mobile-topbar { display: none; }
+  }
+
+.mobile-topbar {
+	height: 50px;
+}
+
+blockquote.twitter-tweet {
+  background-color: #f0f0f0;
+  padding: 1em .5em 1em 1.5em;
+  border-left: 5px solid #55acee;
+  line-height: 1.2em;
+  font-size: 1em;
+}
+
+blockquote.twitter-tweet p {
+  font-size: 1em;
+}
+
+.menu {
+  background:#fff;
+  height:50px;
+  position:absolute;
+  top:0px;
+  width:100%;
+}
+.fixed {
+  position:fixed;
+  top:0;
+}
+
+.logo {
+  color: #24BCF4;
+  height: 40px;
+  width: 87px;
+  background-image: url(../images/second-screen.svg);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size:100% 100%;
+  -o-background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+}
+
+.mobile-topbar .logo {
+  height: 35px;
+  width: 76px;
+}
+
+footer {
+  padding-bottom: 4em;
+}
