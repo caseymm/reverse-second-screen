@@ -58,20 +58,25 @@
     var newPosition = 0;
     var currentPosition = -1;
 
+    var hc = $(document).height()/5;
+    // hc ... height chunk. 20% of the document height
+
 $(window).scroll(function (event) {
     var maxPosition = vid_list.length;
     if (maxPosition == 0) {return};
 
     var scroll = $(window).scrollTop();
 
-    if (scroll.between(1,500)){
+    if (scroll.between(1,hc)){
       newPosition = 0;
-    } else if (scroll.between(500,900)){
+    } else if (scroll.between(hc,hc*2)){
       newPosition = 1;
-    } else if (scroll.between(900,1200)){
+    } else if (scroll.between(hc*2,hc*3)){
       newPosition = 2;
-    } else {
+    } else if (scroll.between(hc*3,hc*4)){
       newPosition = 3;
+    } else {
+      newPosition = 4;
     }
     // console.log("new: " + newPosition + " && max: " + maxPosition);
 
