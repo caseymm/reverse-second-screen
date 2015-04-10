@@ -1,8 +1,11 @@
 # Reverse Second Screen
 
-Challenge: How might we create an immersive experience for users without overwhelming them with information and a variety of content types? 
+## THE CHALLENGE
+How might we create an immersive experience for users without overwhelming them with information and a variety of content types? 
 
-*Reverse Second Screen* helps set the mood and context of a story through ambient sound and images presented on a secondary screen, while the user is going through the core story content on their mobile phone. 
+![Reverse Second Screen](https://github.com/caseymm/reverse-second-screen/ReverseSecondScreen.png)
+
+**Reverse Second Screen** helps set the mood and context of a story through ambient sound and images presented on a secondary screen, while the user is going through the core story content on their mobile phone. 
 
 Given the amount of content and external triggers that distract from the reading experience, *Reverse Second Screen* allows the user to read deeply while minimizing the cognitive burden that detracts from a mindful experience.
 
