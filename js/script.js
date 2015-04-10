@@ -55,34 +55,34 @@
         feature = hashes[1];
     var vid_list = getVideoList(feature);
 
-var newPosition = 0;
-var currentPosition = 1;
+    var newPosition = 0;
+    var currentPosition = -1;
 
 $(window).scroll(function (event) {
+    var maxPosition = vid_list.length;
+    if (maxPosition == 0) {return};
+
     var scroll = $(window).scrollTop();
+
     if (scroll.between(1,500)){
+      newPosition = 0;
+    } else if (scroll.between(500,900)){
       newPosition = 1;
-    } else if (scroll.between(500,800)){
+    } else if (scroll.between(900,1200)){
       newPosition = 2;
-    } else if (scroll.between(800,1200)){
-      newPosition = 3;
     } else {
-      newPosition = 4;
+      newPosition = 3;
+    }
+    // console.log("new: " + newPosition + " && max: " + maxPosition);
+
+    if (newPosition < maxPosition){
+      if (newPosition !== currentPosition){
+        console.log("changing to: " + vid_list[newPosition]);
+        changeClass(user, feature, vid_list[newPosition]);
+        currentPosition = newPosition;
+      };
     }
 
-    console.log("new: " + newPosition + " old: " + currentPosition);
-
-    if (newPosition !== currentPosition){
-      console.log("changing!");
-      if (newPosition % 2 == 0){
-        console.log(vid_list[0]);
-        changeClass(user, feature, vid_list[0]);
-      } else {
-        console.log(vid_list[1]);
-        changeClass(user, feature, vid_list[1]);
-      }
-      currentPosition = newPosition;
-    };
 });
 
 Number.prototype.between = function (min, max) {
