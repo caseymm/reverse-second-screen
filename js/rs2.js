@@ -40,7 +40,9 @@
     // audio pause isn't working
     $('body').addClass('fadedlogo');
     $('video').removeClass('bgvid');
-    $('video').get(0).pause();
+    $.each($('video'), function( index, value ) {
+      $('video').get(index).pause();
+    });
     $('#'+current_id).addClass('bgvid');
     $('#'+current_id).get(0).play();
   }
