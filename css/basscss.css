@@ -1225,11 +1225,3 @@ input[type=range] {
   /* Legacy support */
 
 }
-
-img.settings{
-  width: 35px;
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  z-index: 1;
-}
