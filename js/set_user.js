@@ -1,4 +1,8 @@
 (function() {
+  var base_url = 'http://'+window.location.host+'';
+  var username;
+  var hash;
+  var html_file;
 
     function checkUser(entered_name){
       var get_users = new Firebase('https://sweltering-torch-4591.firebaseIO.com/users/');
@@ -15,11 +19,33 @@
       })
     };
 
+    function renderLinks(){
+      var large = base_url+'/r2s/#'+username+hash;
+      var small = base_url+'/'+html_file+'#'+username+hash;
+      $('#large-screen').html('<a href="'+large+'" target="_blank">'+large+'</a>');
+      $('#small-screen').html('<a href="'+small+'" target="_blank">'+small+'</a>');
+    }
+
     $('#nameButton').on('click', function(){
       var entered_name = $('#nameInput').val();
+      username = entered_name;
       checkUser(entered_name);
       $('#nameInput').val('');
     })
+
+    $('#space').on('click', function(){
+      hash = '#space';
+      html_file = 'mars.html';
+      renderLinks();
+    })
+
+    $('#burning_man').on('click', function(){
+      hash = '#burning_man';
+      html_file = 'burning-man.html';
+      renderLinks();
+    })
+
+
 
   $(document).ready(function() {
     // checkUser();
