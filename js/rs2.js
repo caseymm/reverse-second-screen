@@ -38,6 +38,7 @@
 
   function triggerPlay(current_id){
     // audio pause isn't working
+    $('body').addClass('fadedlogo');
     $('video').removeClass('bgvid');
     $('video').get(0).pause();
     $('#'+current_id).addClass('bgvid');

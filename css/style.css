@@ -23,11 +23,17 @@ video{
 
 body{
   background-color: #333;
-  color: #24BCF4;
   background-image: url(../images/second-screen.svg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size:50% 50%;
   -o-background-size: 50% 50%;
   -webkit-background-size: 50% 50%;
+}
+
+.fadedlogo{
+  background-position: 90% 90%;
+  background-size:10% 10%;
+  -o-background-size: 10% 10%;
+  -webkit-background-size: 10% 10%;
 }
