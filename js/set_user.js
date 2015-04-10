@@ -1,5 +1,5 @@
 (function() {
-  var base_url = 'http://'+window.location.host+'';
+  var base_url = window.location.href;
   var username;
   var hash;
   var html_file;
@@ -20,8 +20,8 @@
     };
 
     function renderLinks(){
-      var large = base_url+'/r2s/#'+username+hash;
-      var small = base_url+'/'+html_file+'#'+username+hash;
+      var large = base_url+'r2s/#'+username+'#'+hash;
+      var small = base_url+html_file+'#'+username+'#'+hash;
       $('#large-screen').html('<a href="'+large+'" target="_blank">'+large+'</a>');
       $('#small-screen').html('<a href="'+small+'" target="_blank">'+small+'</a>');
     }
@@ -34,13 +34,13 @@
     })
 
     $('#space').on('click', function(){
-      hash = '#space';
+      hash = 'space';
       html_file = 'mars.html';
       renderLinks();
     })
 
     $('#burning_man').on('click', function(){
-      hash = '#burning_man';
+      hash = 'burning_man';
       html_file = 'burning-man.html';
       renderLinks();
     })
