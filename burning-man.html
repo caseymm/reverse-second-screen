@@ -11,9 +11,12 @@
   <link rel="stylesheet" href="css/custom.css">
   <link rel="icon" href="images/favicon.png">
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css">
+  <script src="js/firebase.js"></script>
   <script src="js/jquery-2.1.3.min.js"></script>
+  <script src='js/script.js'></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
   <script src="js/jquery.ultimate-burger-menu.js"></script>
-  <script src="js/static-menu.js"></script>
+  <!--<script src="js/static-menu.js"></script>-->
 </head>
 
 <body>
@@ -26,7 +29,10 @@
     <a href="./mars.html#luke#space" class="regular button py2 button-transparent">About</a>
     <a href="./mars.html#luke#space" class="regular button py2 button-transparent">Contact</a>
   </div>
+
+
 </nav>
+<img class="settings" src="http://www.icon2s.com/wp-content/uploads/2013/07/ios7-settings-icon.png" />
 
 <nav id="nav" class="mobile-nav hide clearfix">
   <ul>
@@ -35,13 +41,21 @@
     <li><a href="./mars.html#luke#space">Features</a></li>
     <li><a href="./mars.html#luke#space">About</a></li>
     <li><a href="./mars.html#luke#space">Contact</a></li>
+
   </ul>
 </nav>
+
+<div id="pre-slider">
+  <div id="slider"></div>
+</div>
+
 
 <nav class="mobile-topbar menu clearfix"><a href="index.html"><span class="logo regular button ml4 mt1 button-transparent"></a></span></nav>
 
 <section class="white bg-cover bg-center mb1" style="background-image: url(images/burning-man1.jpg)">
+
   <div class="center px2 py4">
+
     <h1 class="huge h0-responsive mt4 mb0 regular">The Old Man at Burning Man</h1>
     <p class="dek h3 mx-auto">It's something we've all been meaning to do. The father-son bonding adventure. You know: The big fishing excursion, The road trip down Route 66.</p>
   </div>
@@ -50,7 +64,7 @@
 
 
 <section class="px3 py2 centered">
-  <div id="slider"></div>
+
 <p>
 The land, the very atmosphere  out there, is alien, malignant, the executioner of countless wagon trains. I am afraid to crack the window. Huge dervishes of alkaline dust reel and teeter past. The sun, a brittle parchment white, glowers as though we personally have done something to piss it off. An hour out here and already I could light an Ohio Blue Tip off the inside of my nostril. One would think we were pulling into this planet's nearest simulation of hell, but if this were hell, we would not be driving this very comfortable recreational vehicle. Nor would there be a trio of young and merry nudists capering at our front bumper, demanding that we step out of the vehicle and join them. These people are checkpoint officials, and it is their duty to press their nakedness to us in the traditional gesture of welcome to the Burning Man festival, here in Nevada's Black Rock Desert.
 </p>
@@ -135,24 +149,26 @@ The root causes of my embarrassment, unsurprisingly, naturally, track back to my
 
     <script>
         $(document).ready(function(){
-            $('#nav').burgerMenu({
-                translate: true,
-                menuWidth: '50%',
-                menuHeight: '100%',
-                menuBorder: 'none',
-                animateSpeed: 500,
-                linkBorderBottom: '1px solid rgba(0,0,0,.125)',
-                keepButtonNextToMenu: true,
-                overlay: '#ffffff'
+            // $('#nav').burgerMenu({
+            //     translate: true,
+            //     menuWidth: '50%',
+            //     menuHeight: '100%',
+            //     menuBorder: 'none',
+            //     animateSpeed: 500,
+            //     linkBorderBottom: '1px solid rgba(0,0,0,.125)',
+            //     keepButtonNextToMenu: true,
+            //     overlay: '#ffffff'
+            // });
+
+            $('#pre-slider').hide();
+
+            $('.settings').on('click', function(){
+              $('#pre-slider').slideToggle();
             });
         });
+
     </script>
 
-
-<script src="js/firebase.js"></script>
-<!-- script src='js/jquery.js'></script -->
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
-<script src='js/script.js'></script>
 
 </body>
 </html>

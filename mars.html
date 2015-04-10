@@ -11,9 +11,11 @@
   <link rel="stylesheet" href="css/custom.css">
   <link rel="icon" href="images/favicon.png">
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css">
+  <script src="js/firebase.js"></script>
   <script src="js/jquery-2.1.3.min.js"></script>
+  <script src='js/script.js'></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
   <script src="js/jquery.ultimate-burger-menu.js"></script>
-  <script src="js/static-menu.js"></script>
 </head>
 
 <body>
@@ -37,6 +39,10 @@
     <li><a href="./burning-man.html#luke#burning_man">Contact</a></li>
   </ul>
 </nav>
+<img class="settings" src="http://www.icon2s.com/wp-content/uploads/2013/07/ios7-settings-icon.png" />
+<div id="pre-slider">
+  <div id="slider"></div>
+</div>
 
 <nav class="mobile-topbar menu clearfix"><a href="index.html"><span class="logo regular button ml4 mt1 button-transparent"></a></span></nav>
 
@@ -51,7 +57,7 @@
 
 
 <section class="px3 py2 centered">
-  <div id="slider"></div>
+  <div class="slider"></div>
 <p>
 For lifeless chemical compounds to organize themselves into something alive, scientists generally agree, three sets of things must be present:
 </p>
@@ -140,24 +146,23 @@ That too may soon change. Last spring, several Curiosity team members reported t
 
     <script>
         $(document).ready(function(){
-            $('#nav').burgerMenu({
-                translate: true,
-                menuWidth: '50%',
-                menuHeight: '100%',
-                menuBorder: 'none',
-                animateSpeed: 500,
-                linkBorderBottom: '1px solid rgba(0,0,0,.125)',
-                keepButtonNextToMenu: true,
-                overlay: '#ffffff'
+            // $('#nav').burgerMenu({
+            //     translate: true,
+            //     menuWidth: '50%',
+            //     menuHeight: '100%',
+            //     menuBorder: 'none',
+            //     animateSpeed: 500,
+            //     linkBorderBottom: '1px solid rgba(0,0,0,.125)',
+            //     keepButtonNextToMenu: true,
+            //     overlay: '#ffffff'
+            // });
+            $('#pre-slider').hide();
+
+            $('.settings').on('click', function(){
+              $('#pre-slider').slideToggle();
             });
         });
     </script>
-
-
-<script src="js/firebase.js"></script>
-<!-- script src='js/jquery.js'></script -->
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
-<script src='js/script.js'></script>
 
 </body>
 </html>

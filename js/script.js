@@ -46,7 +46,6 @@
     };
 
 
-
   $(document).ready(function() {
     var url = window.location.href;
     var hashes = url.split('#');
