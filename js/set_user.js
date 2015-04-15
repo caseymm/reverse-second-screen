@@ -13,7 +13,7 @@
           get_users.on('child_changed', function (snapshot) {
             users = snapshot.val();
           })
-          users[entered_name] = { "burning_man" : { "slug" : "burning_man1", "volume" : 0.5 }, "space" : { "slug" : "space1", "volume" : 0.5} }
+          users[entered_name] = { "last_loaded": "space", "burning_man" : { "slug" : "burning_man1", "volume" : 0.5 }, "space" : { "slug" : "space1", "volume" : 0.5} }
           get_users.set(users);
         }
       })
