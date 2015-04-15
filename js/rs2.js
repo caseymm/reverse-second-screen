@@ -55,11 +55,14 @@
     var url = window.location.href;
     var hashes = url.split('#');
     hashes.splice(0,1);
-    var user = hashes[0],
-        feature = hashes[1];
-    loadVideo(feature);
-    changeClass(user, feature);
-
+    var user = hashes[0];
+    var feature;
+    var load_feature = new Firebase('https://sweltering-torch-4591.firebaseIO.com/users/'+user+'/last_loaded');
+    load_feature.on('value', function (snapshot) {
+      feature = snapshot.val();
+      loadVideo(feature);
+      changeClass(user, feature);
+    });
 
   });
 })();

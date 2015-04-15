@@ -43,17 +43,25 @@
 
     };
 
+  function startSession(user, feature){
+    var last_loaded = new Firebase('https://sweltering-torch-4591.firebaseIO.com/users/'+user+'/last_loaded');
+    last_loaded.set(feature);
+  }
+
 
   $(document).ready(function() {
     var url = window.location.href;
     var new_url = url.replace("%23", "#");
+    var index_to_hash = new_url.split('#');
+    // Clean this
+    var feature = index_to_hash[0].replace(window.location.origin, '').replace('/', '').replace('.html', '');
     var hashes = new_url.split('#');
     hashes.splice(0,1);
-    var user = hashes[0],
-        feature = hashes[1];
+    var user = hashes[0];
 
     changeVolume(user, feature);
-    
+    startSession(user, feature);
+
     var vid_list = getVideoList(feature);
 
     var newPosition = 0;
