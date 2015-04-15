@@ -155,4 +155,37 @@ section.centered{
   color: white;
   border-width: 0px;
   border-radius: 3px;
+  cursor: pointer;
+}
+
+a{
+  color: #00b0fb;
+  text-decoration: none;
+}
+
+.index div button.selected{
+  background-color: #0082aa;
+}
+
+#current-username{
+  margin-top: 0px;
+}
+
+.link-gen.first{
+  display:none;
+  margin-bottom: 0px;
+}
+
+.arrow-down{
+  width: 0;
+	height: 0;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid #fff;
+  margin: auto;
+  margin-top: -20px;
+}
+
+.arrow-down.gray{
+  border-top: 20px solid #e1e1e1;
 }
