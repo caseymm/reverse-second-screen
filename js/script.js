@@ -54,7 +54,8 @@
     var new_url = url.replace("%23", "#");
     var index_to_hash = new_url.split('#');
     // Clean this
-    var feature = index_to_hash[0].replace(window.location.origin, '').replace('/', '').replace('.html', '');
+    var origin_array = index_to_hash[0].replace('http://', '').split('/');
+    var feature = origin_array[origin_array.length - 1].replace('.html', '');
     var hashes = new_url.split('#');
     hashes.splice(0,1);
     var user = hashes[0];
