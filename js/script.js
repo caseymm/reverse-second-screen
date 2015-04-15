@@ -48,7 +48,8 @@
 
   $(document).ready(function() {
     var url = window.location.href;
-    var hashes = url.split('#');
+    var new_url = url.replace("%23", "#");
+    var hashes = new_url.split('#');
     hashes.splice(0,1);
     var user = hashes[0],
         feature = hashes[1];
