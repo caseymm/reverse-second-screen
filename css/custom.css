@@ -82,14 +82,20 @@ padding-bottom:5rem;
   position: absolute;
   z-index: 1001;
   width: 100%;
-  padding: 20px 30px;
+  padding: 20px 0px;
   top: 50px;
   /* display: none; */
   /* height: 30px; */
-  background-color: #fff;
+  background-color: #F2F2F2;
 }
+
+#pre-slider p{
+  text-align: center;
+}
+
 #slider{
-  width:88%;
+  width:85%;
+  margin:auto;
 }
 
 nav{
@@ -155,4 +161,37 @@ section.centered{
   color: white;
   border-width: 0px;
   border-radius: 3px;
+  cursor: pointer;
+}
+
+a{
+  color: #00b0fb;
+  text-decoration: none;
+}
+
+.index div button.selected{
+  background-color: #0082aa;
+}
+
+#current-username{
+  margin-top: 0px;
+}
+
+.link-gen.first{
+  display:none;
+  margin-bottom: 0px;
+}
+
+.arrow-down{
+  width: 0;
+	height: 0;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid #fff;
+  margin: auto;
+  margin-top: -20px;
+}
+
+.arrow-down.gray{
+  border-top: 20px solid #e1e1e1;
 }

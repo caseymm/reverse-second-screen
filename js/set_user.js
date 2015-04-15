@@ -13,7 +13,7 @@
           get_users.on('child_changed', function (snapshot) {
             users = snapshot.val();
           })
-          users[entered_name] = { "burning_man" : { "slug" : "burning_man1", "volume" : 0.5 }, "space" : { "slug" : "space2", "volume" : 0.5} }
+          users[entered_name] = { "burning_man" : { "slug" : "burning_man1", "volume" : 0.5 }, "space" : { "slug" : "space1", "volume" : 0.5} }
           get_users.set(users);
         }
       })
@@ -24,6 +24,8 @@
       var small = base_url+html_file+'#'+username+'#'+hash;
       $('#large-screen').html('<a href="'+large+'" target="_blank">'+large+'</a>');
       $('#small-screen').html('<a href="'+small+'" target="_blank">'+small+'</a>');
+      // $('.arrow-down.gray').slideDown();
+      $('.link-gen').slideDown();
     }
 
     $('#nameButton').on('click', function(){
@@ -31,18 +33,25 @@
       username = entered_name;
       checkUser(entered_name);
       $('#nameInput').val('');
+      // $('#current-username').html('Current username: '+username);
+      renderLinks();
     })
 
     $('#space').on('click', function(){
       hash = 'space';
       html_file = 'mars.html';
-      renderLinks();
+      // renderLinks();
     })
 
     $('#burning_man').on('click', function(){
       hash = 'burning_man';
       html_file = 'burning-man.html';
-      renderLinks();
+      // renderLinks();
+    })
+
+    $('.feature').on('click', function(){
+      $('.feature').removeClass('selected');
+      $(this).addClass('selected');
     })
 
 

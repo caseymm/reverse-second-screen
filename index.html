@@ -16,19 +16,24 @@
     <img src="images/second-screen.svg" style="max-width:400px;" />
     <p>Reverse Second Screen link generator</p>
   </div>
+  <div class="arrow-down"></div>
   <div>
-    <input type='text' id='nameInput'  placeholder='Enter username'>
+    <p>
+      Username:
+      <input type='text' id='nameInput'  placeholder='Enter username'>
+    </p>
+    <p>Feature piece:
+      <button class="feature" id="space">Mars</button>
+      <button class="feature" id="burning_man">Burning Man</button>
+    </p>
     <br />
-    <button id="nameButton">check name</button>
+    <button id="nameButton">Generate links</button>
   </div>
-  <div>
-    <p>Select feature piece</p>
-    <button id="space">Mars</button>
-    <button id="burning_man">Burning Man</button>
-  </div>
-  <div>
-    <p>Large screen link:<span id="large-screen"></span></p>
-    <p>Small screen link:<span id="small-screen"></span></p>
+  <div class="link-gen first">
+    <div class="arrow-down gray"></div>
+    <!-- <p id="current-username"></p> -->
+    <p>Large screen link: <span id="large-screen"></span></p>
+    <p>Small screen link: <span id="small-screen"></span></p>
   </div>
 
 

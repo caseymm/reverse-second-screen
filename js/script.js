@@ -17,8 +17,6 @@
     var itemField = $('#itemInput');
     var itemList = $('#example-items');
         user_data.set(item);
-
-    changeVolume(user, feature);
   }
 
   function changeVolume(user, feature){
@@ -48,10 +46,14 @@
 
   $(document).ready(function() {
     var url = window.location.href;
-    var hashes = url.split('#');
+    var new_url = url.replace("%23", "#");
+    var hashes = new_url.split('#');
     hashes.splice(0,1);
     var user = hashes[0],
         feature = hashes[1];
+
+    changeVolume(user, feature);
+    
     var vid_list = getVideoList(feature);
 
     var newPosition = 0;
