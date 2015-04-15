@@ -82,14 +82,20 @@ padding-bottom:5rem;
   position: absolute;
   z-index: 1001;
   width: 100%;
-  padding: 20px 30px;
+  padding: 20px 0px;
   top: 50px;
   /* display: none; */
   /* height: 30px; */
-  background-color: #fff;
+  background-color: #F2F2F2;
 }
+
+#pre-slider p{
+  text-align: center;
+}
+
 #slider{
-  width:88%;
+  width:85%;
+  margin:auto;
 }
 
 nav{

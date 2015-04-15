@@ -17,8 +17,6 @@
     var itemField = $('#itemInput');
     var itemList = $('#example-items');
         user_data.set(item);
-
-    changeVolume(user, feature);
   }
 
   function changeVolume(user, feature){
@@ -53,6 +51,9 @@
     hashes.splice(0,1);
     var user = hashes[0],
         feature = hashes[1];
+
+    changeVolume(user, feature);
+    
     var vid_list = getVideoList(feature);
 
     var newPosition = 0;
